@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripik Banano Pops - Mood Booster Kamu!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Playful yang cocok buat snack -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        banana: {
+                            light: '#FFF9C4',
+                            DEFAULT: '#FFEB3B', // Kuning Pisang
+                            dark: '#FBC02D',
+                        },
+                        choco: '#5D4037', // Warna Coklat Teks
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Fredoka', sans-serif; }
+        
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+
+        .shake-hover:hover {
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+    </style>
+</head>
+<body class="bg-banana-light text-choco">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-banana-DEFAULT/90 backdrop-blur-sm shadow-md border-b-4 border-choco">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold flex items-center gap-2">
+                🍌 Kripik Banano Pops
+            </a>
+            <!-- TARGET BLANK DITAMBAHKAN DISINI -->
+            <a href="https://wa.me/62895386833481" 
+               target="_blank"
+               class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-bold transition shadow-[4px_4px_0px_0px_rgba(93,64,55,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] border-2 border-choco text-sm md:text-base">
+               <i class="fab fa-whatsapp mr-1"></i> Pesan Sekarang
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 px-4 overflow-hidden relative">
+        <div class="absolute top-20 right-0 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div class="absolute top-40 left-0 w-64 h-64 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Teks -->
+            <div class="text-center md:text-left order-2 md:order-1">
+                <div class="inline-block bg-white px-4 py-1 rounded-full border-2 border-choco mb-4 font-bold text-sm transform -rotate-2">
+                    ✨ Cuma 5k Aja!
+                </div>
+                <h1 class="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight drop-shadow-sm">
+                    Balikin <span class="text-orange-500">MOOD</span><br>Gak Harus Mahal!
+                </h1>
+                <p class="text-lg md:text-xl mb-8 font-medium">
+                    Cukup ngemil <b>Banano Pops</b>, mood kamu dijamin langsung naik! Renyah, manis, dan bikin nagih. 😋
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <!-- BACKGROUND GANTI ORANGE, TEKS JADI PUTIH BIAR JELAS -->
+                    <a href="#flavors" class="bg-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition shadow-[6px_6px_0px_0px_rgba(93,64,55,0.2)] hover:translate-y-1 hover:shadow-none border-2 border-choco">
+                        Lihat Rasa 🍫
+                    </a>
+                    <a href="https://www.instagram.com/banpops2/" target="_blank" class="bg-white text-choco px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-[6px_6px_0px_0px_rgba(93,64,55,0.2)] border-2 border-choco flex items-center justify-center gap-2">
+                        <i class="fab fa-instagram text-pink-500 text-xl"></i> Cek IG Kami
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gambar -->
+            <div class="order-1 md:order-2 relative flex justify-center">
+                <!-- Blob Background -->
+                <div class="absolute inset-0 bg-yellow-400 blob-shape transform scale-110 rotate-6 opacity-50"></div>
+                <!-- Foto Produk -->
+                <div class="relative w-80 h-[28rem] md:w-96 md:h-[32rem] bg-white rounded-3xl border-4 border-choco shadow-[10px_10px_0px_0px_rgba(93,64,55,1)] overflow-hidden flex items-center justify-center group shake-hover cursor-pointer">
+                    <!-- SAYA GANTI PAKAI LINK YANG PASTI JALAN -->
+                    <!-- Nanti kalau mau pakai fotomu sendiri, ganti src="..." jadi src="nama_fotomu.jpg" -->
+                    <img src="New folder/pisang.jpeg" 
+                         alt="Poster Banano Pops" 
+                         class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
+                         onerror="this.src='https://placehold.co/400x500/FFEB3B/5D4037?text=Foto+Produk+Disini'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLAVOR SECTION -->
+    <section id="flavors" class="py-20 bg-white border-t-4 border-choco relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-4">Pilih Rasa Favoritmu!</h2>
+                <p class="text-xl">Ada 4 varian yang siap nemenin nugas atau nongkrong.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Rasa 1: Coklat (Sekarang bisa diklik lari ke WA) -->
+                <a href="https://wa.me/62895386833481?text=Halo%20kak%2C%20mau%20pesan%20Banano%20Pops%20rasa%20COKLAT%20dong!" target="_blank" class="block bg-banana-light border-4 border-choco rounded-2xl p-4 text-center hover:-translate-y-2 transition duration-300 shadow-[6px_6px_0px_0px_rgba(93,64,55,1)] hover:shadow-[8px_8px_0px_0px_rgba(93,64,55,1)] cursor-pointer">
+                    <div class="w-full h-32 bg-amber-800 rounded-xl mb-4 flex items-center justify-center text-4xl border-2 border-choco">🍫</div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Coklat</h3>
+                    <p class="text-sm mb-4">Manisnya pas, gak bikin eneg. Best seller!</p>
+                    <span class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full border border-choco">Pesan: Rp 5.000</span>
+                </a>
+
+                <!-- Rasa 2: Matcha (Sekarang bisa diklik lari ke WA) -->
+                <a href="https://wa.me/62895386833481?text=Halo%20kak%2C%20mau%20pesan%20Banano%20Pops%20rasa%20MATCHA%20dong!" target="_blank" class="block bg-banana-light border-4 border-choco rounded-2xl p-4 text-center hover:-translate-y-2 transition duration-300 shadow-[6px_6px_0px_0px_rgba(93,64,55,1)] hover:shadow-[8px_8px_0px_0px_rgba(93,64,55,1)] cursor-pointer">
+                    <div class="w-full h-32 bg-green-200 rounded-xl mb-4 flex items-center justify-center text-4xl border-2 border-choco">🍵</div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Matcha</h3>
+                    <p class="text-sm mb-4">Aroma teh hijau yang bikin rileks.</p>
+                    <span class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full border border-choco">Pesan: Rp 5.000</span>
+                </a>
+
+                <!-- Rasa 3: Stroberi (Sekarang bisa diklik lari ke WA) -->
+                <a href="https://wa.me/62895386833481?text=Halo%20kak%2C%20mau%20pesan%20Banano%20Pops%20rasa%20STROBERI%20dong!" target="_blank" class="block bg-banana-light border-4 border-choco rounded-2xl p-4 text-center hover:-translate-y-2 transition duration-300 shadow-[6px_6px_0px_0px_rgba(93,64,55,1)] hover:shadow-[8px_8px_0px_0px_rgba(93,64,55,1)] cursor-pointer">
+                    <div class="w-full h-32 bg-pink-200 rounded-xl mb-4 flex items-center justify-center text-4xl border-2 border-choco">🍓</div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Stroberi</h3>
+                    <p class="text-sm mb-4">Manis asem seger, favorit cewek-cewek.</p>
+                    <span class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full border border-choco">Pesan: Rp 5.000</span>
+                </a>
+
+                <!-- Rasa 4: Tiramisu (Sekarang bisa diklik lari ke WA) -->
+                <a href="https://wa.me/62895386833481?text=Halo%20kak%2C%20mau%20pesan%20Banano%20Pops%20rasa%20TIRAMISU%20dong!" target="_blank" class="block bg-banana-light border-4 border-choco rounded-2xl p-4 text-center hover:-translate-y-2 transition duration-300 shadow-[6px_6px_0px_0px_rgba(93,64,55,1)] hover:shadow-[8px_8px_0px_0px_rgba(93,64,55,1)] cursor-pointer">
+                    <div class="w-full h-32 bg-amber-100 rounded-xl mb-4 flex items-center justify-center text-4xl border-2 border-choco">☕</div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Tiramisu</h3>
+                    <p class="text-sm mb-4">Mewah dan creamy, rasa cafe harga kaki lima.</p>
+                    <span class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full border border-choco">Pesan: Rp 5.000</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI / QUOTE SECTION -->
+    <section class="py-20 px-4 bg-banana-DEFAULT text-choco text-center relative overflow-hidden">
+        <!-- Dekorasi Pisang -->
+        <div class="absolute top-10 left-10 text-6xl opacity-20 rotate-12">🍌</div>
+        <div class="absolute bottom-10 right-10 text-6xl opacity-20 -rotate-12">🐒</div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-black mb-8 leading-relaxed">
+                "Enggak semua yang balikin MOOD itu mahal,<br>cukup <span class="bg-white px-2 decoration-slice">NGEMIL BANANO POPS</span><br>Mood kamu jauh lebih baik! 😊"
+            </h2>
+            <div class="flex justify-center gap-2">
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+                <i class="fas fa-star text-orange-500"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & FOOTER -->
+    <footer class="bg-choco text-banana-light py-12 border-t-8 border-orange-500">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-heading text-4xl mb-6">Siap Nyetok Buat di Kamar?</h2>
+            <p class="mb-8 text-lg opacity-90">Langsung chat admin sekarang sebelum kehabisan rasa favoritmu!</p>
+            
+            <!-- TARGET BLANK DITAMBAHKAN DISINI JUGA -->
+            <a href="https://wa.me/62895386833481" 
+               target="_blank"
+               class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white text-xl font-bold px-8 py-4 rounded-full transition transform hover:scale-105 shadow-lg border-2 border-white">
+                <i class="fab fa-whatsapp text-2xl"></i> Order via WhatsApp
+            </a>
+
+            <div class="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-center items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> 0895-3868-33481
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-instagram"></i> @banpops2
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <p class="font-heading text-xl font-bold text-orange-400 tracking-wide">Founder: Shello Aryo Nugroho</p>
+            </div>
+            
+            <p class="mt-4 text-sm opacity-50 font-sans">© 2024 Banano Pops. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
